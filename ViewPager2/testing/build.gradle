@@ -29,12 +29,7 @@ android {
         }
     }
 
-    // share the unified tests
-    sourceSets {
-        test {
-            java.srcDir "src/main/java"
-        }
-    }
+
     testOptions {
         unitTests {
             includeAndroidResources = true
