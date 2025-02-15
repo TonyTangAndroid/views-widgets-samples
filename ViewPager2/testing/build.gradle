@@ -32,16 +32,14 @@ android {
     // share the unified tests
     sourceSets {
         test {
-            java.srcDir "src/sharedTest/java"
-        }
-        androidTest {
-            java.srcDir "src/sharedTest/java"
+            java.srcDir "src/main/java"
         }
     }
     testOptions {
         unitTests {
             includeAndroidResources = true
         }
+    }
 }
 
 dependencies {
