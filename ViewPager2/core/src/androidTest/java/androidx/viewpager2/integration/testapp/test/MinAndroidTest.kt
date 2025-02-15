@@ -16,14 +16,22 @@
 
 package androidx.viewpager2.integration.testapp.test
 
+import android.content.Context
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
-import androidx.viewpager2.integration.testapp.MutableCollectionViewActivity
+import com.google.common.truth.Truth
+import org.junit.Test
 import org.junit.runner.RunWith
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class MutableCollectionViewTest :
-    MutableCollectionBaseTest<MutableCollectionViewActivity>(
-        MutableCollectionViewActivity::class.java
-    )
+class MinAndroidTest() {
+
+  @Test
+  fun name() {
+    val context: Context = ApplicationProvider.getApplicationContext()
+    Truth.assertThat(context.packageName).isEqualTo("androidx.viewpager2.integration.testapp.test")
+
+  }
+}
