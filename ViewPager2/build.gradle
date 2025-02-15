@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:8.8.1'
-        classpath("org.jetbrains.kotlin.android:org.jetbrains.kotlin.android.gradle.plugin:2.1.10")
+        classpath 'org.jetbrains.kotlin.android:org.jetbrains.kotlin.android.gradle.plugin:2.1.10'
     }
 }
 
