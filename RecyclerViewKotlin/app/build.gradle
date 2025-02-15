@@ -15,16 +15,15 @@
  */
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
-    compileSdkVersion 30
-
+    compileSdk 35
+    namespace "com.example.recyclersample"
     defaultConfig {
         applicationId "com.example.recyclersample"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdk 28
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
