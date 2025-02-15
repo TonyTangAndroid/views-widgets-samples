@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.ManagedVirtualDevice
+
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
 android {
@@ -32,6 +34,32 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // share the unified tests
+    sourceSets {
+        test {
+            java.srcDir "src/sharedTest/java"
+        }
+        androidTest {
+            java.srcDir "src/sharedTest/java"
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+        managedDevices {
+            devices {
+                // run with ../gradlew  nexusOneApi30DebugAndroidTest
+                nexusOneApi30(ManagedVirtualDevice) {
+                    // A lower resolution device is used here for better emulator performance
+                    device = "Nexus One"
+                    apiLevel = 30
+                    // Also use the AOSP ATD image for better emulator performance
+                    systemImageSource = "aosp-atd"
+                }
+            }
+        }
 }
 
 dependencies {
