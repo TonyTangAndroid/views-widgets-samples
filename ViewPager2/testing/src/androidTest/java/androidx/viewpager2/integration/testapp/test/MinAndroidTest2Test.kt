@@ -27,22 +27,10 @@ import org.junit.runner.RunWith
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class MinAndroidTestTest {
+class MinAndroidTest2Test {
 
   @Test
-  fun test123() {
-    val context: Context = ApplicationProvider.getApplicationContext()
-    assertThat(context.packageName).isEqualTo("androidx.viewpager2.integration.testapp.test.test")
-  }
-
-  @Test
-  fun test321() {
-    val context: Context = ApplicationProvider.getApplicationContext()
-    assertThat(context.packageName).isNotEqualTo("androidx.viewpager2.integration.testapp.test")
-  }
-
-  @Test
-  fun test456() {
+  fun test789() {
     val context: Context = ApplicationProvider.getApplicationContext()
     assertThat(context.packageName).isNotEqualTo("androidx.viewpager2.integration.testapp.test")
   }
