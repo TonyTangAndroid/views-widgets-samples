@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
+    namespace 'com.example.androidx.viewpager2'
     defaultConfig {
         applicationId "com.example.androidx.viewpager2"
         minSdkVersion 14
