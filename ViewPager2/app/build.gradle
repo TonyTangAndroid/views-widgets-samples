@@ -30,6 +30,8 @@ android {
 }
 
 dependencies {
-    implementation project(':core')
+    api project(':core')
+    testImplementation project(':testing')
+    testImplementation('org.robolectric:robolectric:4.14.1')
     androidTestImplementation project(':testing')
 }
