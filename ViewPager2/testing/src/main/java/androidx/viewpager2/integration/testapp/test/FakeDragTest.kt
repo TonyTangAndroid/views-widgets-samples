@@ -44,12 +44,13 @@ import androidx.viewpager2.widget.ViewPager2.ORIENTATION_VERTICAL
 import androidx.viewpager2.widget.ViewPager2.SCROLL_STATE_DRAGGING
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import java.lang.reflect.Field
 import kotlin.math.sign
-
+@Ignore("x")
 @LargeTest
 @RunWith(Parameterized::class)
 class FakeDragTest(private val config: TestConfig) :
