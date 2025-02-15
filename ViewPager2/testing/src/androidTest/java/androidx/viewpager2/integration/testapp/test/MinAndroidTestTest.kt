@@ -30,8 +30,14 @@ import org.junit.runner.RunWith
 class MinAndroidTestTest {
 
   @Test
-  fun name() {
+  fun test123() {
     val context: Context = ApplicationProvider.getApplicationContext()
     assertThat(context.packageName).isEqualTo("androidx.viewpager2.integration.testapp.test.test")
+  }
+
+  @Test
+  fun test321() {
+    val context: Context = ApplicationProvider.getApplicationContext()
+    assertThat(context.packageName).isNotEqualTo("androidx.viewpager2.integration.testapp.test")
   }
 }
